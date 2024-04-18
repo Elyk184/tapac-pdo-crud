@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "../db/config.php";
  
 // Define variables and initialize with empty values
 $product_name = $product_details = $product_retail_price = "";
@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
         $product_name_err = "Please enter a valid name.";
     } else{
-        $product_name = $input_product_name;
+        $product_name = $input_name;
     }
     
     // Validate address
