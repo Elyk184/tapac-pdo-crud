@@ -4,7 +4,7 @@ server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'u593341949_dev_tapac');
 define('DB_PASSWORD', '20221230Tapac');
-define('DB_NAME', 'kyle');
+define('DB_NAME', 'u593341949_db_tapac');
  
 /* Attempt to connect to MySQL database */
 try{
