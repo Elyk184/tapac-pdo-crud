@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="./public/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+        <a href="../public/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
     <div class="wrapper">
         <div class="container-fluid">
@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                     <?php
                     // Include config file
-                    require_once "./db/config.php";
+                    require_once "../db/config.php";
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM products";
