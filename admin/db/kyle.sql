@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2024 at 09:08 AM
+-- Generation Time: May 30, 2024 at 03:37 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,6 +37,13 @@ CREATE TABLE `addresses` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `street_address`, `city`, `state`, `postal_code`, `country`, `created_at`) VALUES
+(4, 'sayre highway', 'manolo', 'Bukidnon', '8703', 'Philippines', '2024-05-30 01:05:58');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +57,17 @@ CREATE TABLE `payments` (
   `payment_method` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`id`, `product_name`, `price`, `payment_method`, `created_at`) VALUES
+(3, 'kyle', 5.00, 'GCash', '2024-05-30 01:05:23'),
+(4, '', 0.00, 'PayMaya', '2024-05-30 01:05:24'),
+(5, '', 0.00, 'PayMaya', '2024-05-30 01:05:27'),
+(6, '', 0.00, 'PayMaya', '2024-05-30 01:05:27'),
+(7, '', 0.00, 'PayMaya', '2024-05-30 01:05:28');
 
 -- --------------------------------------------------------
 
@@ -77,7 +95,10 @@ INSERT INTO `products` (`id`, `title`, `description`, `price`, `rrp`, `quantity`
 (11, 'Pan de Coco', 'soft bread roll stuffed with sweetened grated coco...', 7, 5, 100, 'https://i.pinimg.com/236x/fb/c8/bd/fbc8bdfae91793b9ada58e49b87aa66b.jpg', '2024-05-29 15:05:33'),
 (12, 'Ensaymada', 'soft and fluffy brioche, oozing with cream cheese filling', 7, 5, 100, 'https://i.pinimg.com/236x/e1/a8/66/e1a866ca2d326e32f63d26df8f66c329.jpg', '2024-05-29 15:06:18'),
 (13, 'Monay', 'slightly sweet taste and dense texture', 7, 5, 100, 'https://i.pinimg.com/236x/9d/b2/ea/9db2ea2ceb43873f4cfe735a027c455d.jpg', '2024-05-29 15:06:52'),
-(14, 'Star bread', 'sweet, dense bread with a unique crown shape on top', 7, 5, 100, 'https://i.pinimg.com/236x/fe/61/a4/fe61a48b718ea6b13e9b004f09229823.jpg', '2024-05-29 15:07:27');
+(14, 'Star bread', 'sweet, dense bread with a unique crown shape on top', 7, 5, 100, 'https://i.pinimg.com/236x/fe/61/a4/fe61a48b718ea6b13e9b004f09229823.jpg', '2024-05-29 15:07:27'),
+(15, 'Buko pie', 'made out of semi flaky pastry filled with custard made out of young coconut meat and condensed milk', 12, 10, 100, 'https://i.pinimg.com/736x/60/c8/ed/60c8ed18fabe056b2febb5e47cb1c414.jpg', '2024-05-30 09:19:12'),
+(16, 'Hopia', 'A crusty flaky treat filled with sweet mongo bean paste', 7, 5, 100, 'https://i.pinimg.com/236x/72/88/b7/7288b7ab3700d39eec8a679a30db45ae.jpg', '2024-05-30 09:21:19'),
+(17, 'Cheese bread', 'basic bread that is flavored with cheese', 7, 5, 100, 'https://i.pinimg.com/236x/7a/42/3f/7a423fcefa9cb8cec7128ac5703449ac.jpg', '2024-05-30 09:24:39');
 
 -- --------------------------------------------------------
 
@@ -91,6 +112,13 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
+(4, 'grabe', '$2y$10$o3pwtlOOmaZYgVXf9dT8KOa0itmURxU1lpy6txDbPnw1FzmldVna.', '2024-05-30 09:07:04');
 
 --
 -- Indexes for dumped tables
@@ -128,25 +156,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
