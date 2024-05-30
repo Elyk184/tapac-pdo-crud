@@ -62,6 +62,13 @@
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 999;
     }
+    
+    /* Center align the search bar */
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Add some top margin for separation */
+    }
 </style>
 
 </head>
@@ -69,8 +76,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Bootstrap
+        <!-- Removed the Bootstrap logo -->
     </a>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -78,15 +84,13 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
+    <!-- Center aligning the search bar -->
+    <form class="form-inline my-2 my-lg-0 search-bar">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
 </nav>
 
 <div id="productsDisplay" class="card-grid"></div>
