@@ -49,17 +49,19 @@ $conn->close();
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            background-image: url(https://i.pinimg.com/originals/9d/3e/2f/9d3e2f3f2e46a9f4dd0a016415433af8.gif);
             margin: 0;
             padding: 0;
+            background-size: cover;
         }
 
         .container {
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: transparent;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
         }
 
         h2 {

@@ -35,8 +35,12 @@
     }
 
     /* Style for individual cards */
-    .card {
+    .card {  /* Style for individual cards */
         width: 100%; /* Ensure cards take full width of their container */
+        background-color: transparent;
+        border: 4px solid #ffffff; 
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.9);
+
     }
 
     .card-img-top{

@@ -44,21 +44,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-image: url(https://i.pinimg.com/originals/9d/3e/2f/9d3e2f3f2e46a9f4dd0a016415433af8.gif);
+            background-size: cover;
         }
 
         .container {
-            max-width: 400px;
+            width: 90%; /* Adjusted to fit most screens */
+            max-width: 400px; /* Set maximum width for larger screens */
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: transparent; 
+            border: 5px solid #ffffff; 
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #333;
+            color: black;
         }
 
         form {
@@ -69,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         label {
             font-weight: bold;
             margin-bottom: 5px;
-            color: #555;
+            color: black;
         }
 
         input[type="text"] {
@@ -86,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             width: auto;
             padding: 10px 20px;
             background-color: #007bff;
-            color: #fff;
+            color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -102,20 +108,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <h2>Enter Full Address</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?paymentId=<?php echo $_GET['paymentId']; ?>" method="post">
-            <label for="streetAddress">Street Address:</label><br>
-            <input type="text" id="streetAddress" name="streetAddress"><br><br>
+            <label for="streetAddress">Street Address:</label>
+            <input type="text" id="streetAddress" name="streetAddress">
 
-            <label for="city">City:</label><br>
-            <input type="text" id="city" name="city"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
 
-            <label for="state">State:</label><br>
-            <input type="text" id="state" name="state"><br><br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
 
-            <label for="postalCode">Postal Code:</label><br>
-            <input type="text" id="postalCode" name="postalCode"><br><br>
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalCode">
 
-            <label for="country">Country:</label><br>
-            <input type="text" id="country" name="country"><br><br>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country">
 
             <input type="submit" value="Submit">
         </form>
